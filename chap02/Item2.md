@@ -187,3 +187,13 @@ public class Calzone extends Pizza {
 
 }
 ````
+build 메서드는 하위 클래스 어떤 걸 반환해도 상관 없습니다. 하위 메서드가 상위 클래스의 메서드 정의한 반환 타입이 아닌, 그 하위 타입을 반환하는 기능을 공반환 타이핑이라 합니다.</br>
+``` java
+    Pizza pizza = new Builder(SMALL)
+        .addTopping(SAUSAGE).addTopping(ONION).build();
+
+    Calzone calzone = new Calzone.Builder()
+        .addTopping(HAM).sauceInde().build();
+```
+
+빌더는 다양한 방식으로 객체를 생생할 수 있으므로 생성자와 정적 팩토리 메서드 방식보다 상당히 유연합니다.
