@@ -76,7 +76,7 @@ public class NutritionFacts {
     }
   }
 
-    public NutritionFacts(Builder builder) {
+    private NutritionFacts(Builder builder) {
       this.servingSize = builder.servingSize;
       this.servings = builder.servings;
       this.calories = builder.calories;
