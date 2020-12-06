@@ -1,8 +1,6 @@
 # Effective-java 3/E 요약
 ### Effective Java 3/E 학습하면서 정리한 내용입니다.
 
-</br>
-
 ###  **chap02**
 ---
 - [[Item 1] 생성자 대신 정적 팩토리 메서드를 고려하라](https://github.com/brick0123/effective-java/blob/main/chap02/Item1.md)
