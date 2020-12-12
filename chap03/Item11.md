@@ -26,8 +26,9 @@ equals와 hasoCode를 재정의 하지 않으면 `HashMap`이나 `HashSet`에서
 
 `equals` 비교에서 사용되지 않는 필든 '반드시'제외해야 합니다. 그렇지 않으면 맨 처음에 언급했던 두 번째 규약을 어기게됩니다.</br>
 숫자를 곱하는 이유는 만약 곱셉 없는 hahCode를 구현하게 되면 모든 아나그램의 해시코드가 같아집니다. 그리고 31을 선택한 이유는 홀수이면서 소수이기 때문입니다.</br>
-**전형적인 hashCode 메서드**
 ``` java
+전형적인 hashCode 메서드
+
 @Override
 public int hashCode() {
     int result = Short.hashCode(areaCode);
@@ -36,3 +37,12 @@ public int hashCode() {
     return result;
 }
 ```
+``` java
+한 줄짜리 hasoCode 메서드 - 성능이 살짝 아쉽습니다.
+@Override 
+public int hashCode(){
+    return Objects.hash(lineNum, prefix, areaCode);
+}
+```
+### 정리
+`equals`를 재정의 할 때는 `hashCdoe`도 재정의해야 합니다. 그렇지 않으면 프로글매이 제대로 동작하지 않을 수 있습니다. 서로 다른 인스턴스라면 되도록 해시코드도 서로 다르게 구현해야 합니다.
