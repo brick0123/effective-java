@@ -7,8 +7,8 @@
 - 객체의 상태를 변경하는 메서드를 제공하지 않습니다.
 - 클래스를 확장할 수 없도록 합니다.
 - 모든 필드를 private final으로 선언합니다.
+- 생성자 관리를 해주어야 합니다(밑에서 설명)
 - 자신 외에는 내부에 가변 컴포넌트에 접근할 수 없도록 합니다.
-- 생성자를 잘 관리하기 (밑에서 추가 설명)
 
 ``` java
 public final class Calculator {
@@ -62,8 +62,16 @@ public final class Calculator {
   ...
 
 ```
-정적 팩토리 방식으로 다수의 구현 클래스를 활용해 유연성을 제공하고, 객체 캐싱 기능을 추가해 성능을 끌어올리 수 있습니다.</br
->
+정적 팩토리 방식으로 다수의 구현 클래스를 활용해 유연성을 제공하고, 객체 캐싱 기능을 추가해 성능을 끌어올리 수 있습니다.</br></br>
+### `BigInteger`와 `BigDecimal`의 주의점</br>
+두 클래스를 설계할 당시 불변 객체가 final이어야 한다는 인식이 없었습니다. 그래서 두 클래스의 메서드들은 모두 재정의할 수 있게 설계 되었고 하위 호환성이 발목을 잡아 지금까지도 이 문제를 고치지 못했습니다. 그러므로 신뢰할 수 없는 클라이언트로부터 `BigInteger`와 `BigDecimal`의 인스턴스를 인수로 받는다면 주의해야 합니다.
+``` java
+public static BigInteger safeInstance(BingInteger val) {
+  return val.getClass() == BigInteger.class ?
+          val : new BigInteger(val.toByteArray());
+}
+```
+</br>
  정리
 -   **클래스는 꼭 필요한 경우가 아니면 불변이어야 합니다**. 
 -   불변 클래스의 장점들도 있지만 성능 문제도 함께 고려해야합니다
