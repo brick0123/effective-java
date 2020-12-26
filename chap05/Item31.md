@@ -71,3 +71,30 @@ public static <E extends Comparable<? super E>> E max(List<? extends E> c);
 
 위 코드는 PECS 공식을 두 번 적용했습니다. 입력 매개변수에서는 E 인스턴스를 생산하므로 원래의 List<E>를 List<? extends E>로 수정했습니다. 원래 선언에서는 E가 Comparale<E>를 확장한다고 정의헸는데, 이때 Comparable<E>
 는 E 인스턴스를 소비합니다.(그리고 선후 관계를 뜻하는 정수를 생산합니다) 그래서 매개변수화 타입 Comparable<E>는 E 한정적 와일드카드 타입 Comparable<? super E>로 대체 했습니다. Comparable은 언제나 소비자이므로, 일반적으로 Comparable, 일반적으로 Comparable<E>보다는 Comparable<? super E>를 사용하는 편이 낫습니다.</br>
+Comparator도 마찬가지입니다. 일반적으로 Comparator<E>보다는 Comparator<? super E>를 사용하는 편이 낫습니다.</br>
+와일드카드와 관련해 논의해야 할 주제가 더 있습니다. 타입 매개변수와 와일드카드에 공통되는 부분이 있어서, 메서드를 정의할 때 둘 중 어느것을 사용해도 괜찮을 때가 많습니다.
+``` java
+public static <E> void swap(List<E> list, int i, int j);
+public static swap(List<?> list, int i, int j);
+```
+public API라면 간단한 두 번째가 낫습니다. 어떤 리스트든 이 메서드에 넘기면 명시한 인덱스의 원소들을 교환해 줄 것입니다. 신경 써야 할 타입 매개변수도 없습니다.</br>
+기본 규칙은 이렇습니다. **메서드에 선언에 타입 매개변수가 한 번만 나오면 와일드카드로 대체하라.** 이때 비한정적 타입 매개변수라면 비한정적 와일드카드로 바꾸고, 한정적 타입 매개변수라면 한정적 와일드카드로 바꾸면 됩니다.</br>
+하지만 두 번째 swap 선언에는 문제가 하나 있는데, 다음과 같이 직관적으로 구현한 코드가 컴파일 되지 않는다는 것입니다.
+``` java
+public static swap(List<?> list, int i, int j) {
+    list.set(i, list.set(j, list.get(i)));
+}
+// 방금 꺼낸 원소를 리스트에 다시 넣을 수 없습니다.
+```
+원인 리스트의 타입이 List<?>인데, List<?>에는 null 외에는 어떤 값도 넣을 수 없기 때문입니다.
+``` java
+public static swap(List<?> list, int i, int j) {
+    swapHelper(list, i, j);
+}
+
+// 와일드카드 타입을 실제 타입으로 바꿔주는 private 도우미 메서드
+public static <E> void swapHelper(List<E> list, int i, int j) {
+    list.set(i, list.set(j, list.get(i)));
+}
+```
+`swapHelper` 메서드는 리스트가 List<E>임을 알고 있습니다. 즉, 이 리스트에서 꺼낸 값은 항상 E이고, E 타입의 값이라면 이 리스트에 넣어도 안전함을 알고 있습니다. 다소 복잡하지만 덕분에 외부에서는 와일드카드 기반의 멋진 선언을 유지할 수 있습니다. 즉 swap 메서드를 호출 하는 클라이언트는 복잡힌 swapHelper의 존재를 모른 채 그 혜택을 누리는 것입니다.
