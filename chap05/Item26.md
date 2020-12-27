@@ -49,10 +49,12 @@ List<Integer> intList = new ArrayList<>();
 List rawType = intList; // 오류가 발생하지 않지만, 안전하지 않습니다.
 ```
 이쯤 되면 원소의 타입을 몰라도 되는 로 타입을 쓰고 싶어질 수 있습니다. 그럴 땐 비한정적 와일드 타입(unbounded wildcard types)를 사용하는 대안이 있습니다. 이는 타입 파리머티에 `?`을 작성하면 됩니다.
+
 ``` java
 // unbounded wildcard type - 타입 세이프하고 유연합니다,
 static int numElementsInCommon(Set<?> s1, Set<?> s2) { ... }
 ```
+
 그렇다면 비한정적 와일드카드 타입인 Set<?>와 로타입인 Set의 차이는 무엇일까? 물음펴가 무언가 멋진 일은 해주는 것일까?</br>
 와일드 카드는 `type safe`하고 로 타입은 그렇지 않다는 점입니다. 로 타입 원소에는 아무 원소나 넣을 수 있으니 타입 붋변식을 훼손하기 쉽습니다. </br>
 반면 Collection<?>에는 (null 이외는) 어떤 원소도 넣을 수 없습니다. 다른 원소를 넣으려 하면 컴파일 할 때 오류 메세지를 보여줍니다. 이러한 제약을 받아들일 수 없다면 제네릭 메서드나 한정적 와일드카드 타입을 사용하면 됩니다.</br>
