@@ -32,3 +32,12 @@
 - [[Item 24] 멤버 클래스는 되도록 static으로 만들라](https://github.com/brick0123/effective-java/blob/main/chap04/Item24.md)
 - [[Item 25] 톱레벨 클래스는 한 파일에 하나만 담으라](https://github.com/brick0123/effective-java/blob/main/chap04/Item25.md)
 
+## **chap05**
+- [[Item 26] 로 타입은 사용하지 말라](https://github.com/brick0123/effective-java/blob/main/chap05/Item26.md)
+- [[Item 27] 비검사 경고를 제거하라](https://github.com/brick0123/effective-java/blob/main/chap05/Item27.md)
+- [[Item 28] 배열보다는 리스트를 사용하라](https://github.com/brick0123/effective-java/blob/main/chap05/Item28.md)
+- [[Item 29] 이왕이면 제네릭 타입으로 만들라](https://github.com/brick0123/effective-java/blob/main/chap05/Item29.md)
+- [[Item 30] 이왕이면 제네릭 메서드로 만들라](https://github.com/brick0123/effective-java/blob/main/chap05/Item30.md)
+- [[Item 31] 한정적 와일드카드를 사용해 API 유연성을 높이라](https://github.com/brick0123/effective-java/blob/main/chap05/Item31.md)
+- [[Item 32] 제네릭과 가변인수를 함께 쓸 때는 신중하라](https://github.com/brick0123/effective-java/blob/main/chap05/Item32.md)
+- [[Item 33] 타입 안전 이종 컨테이너를 고려하라](https://github.com/brick0123/effective-java/blob/main/chap05/Item33.md)
