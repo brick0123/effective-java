@@ -41,3 +41,16 @@
 - [[Item 31] 한정적 와일드카드를 사용해 API 유연성을 높이라](https://github.com/brick0123/effective-java/blob/main/chap05/Item31.md)
 - [[Item 32] 제네릭과 가변인수를 함께 쓸 때는 신중하라](https://github.com/brick0123/effective-java/blob/main/chap05/Item32.md)
 - [[Item 33] 타입 안전 이종 컨테이너를 고려하라](https://github.com/brick0123/effective-java/blob/main/chap05/Item33.md)
+
+## **chap06**
+- [[Item 34] int 상수 대신 열거 타입을 사용하라](https://github.com/brick0123/effective-java/blob/main/chap06/Item34.md)
+- [[Item 35] ordinal 메서드 대신 인스턴스 필드를 사용하라](https://github.com/brick0123/effective-java/blob/main/chap06/Item35.md)
+- [[Item 36] 비트 필드 대신 EnumSet을 사용하라](https://github.com/brick0123/effective-java/blob/main/chap06/Item36.md)
+- [[Item 37] ordinal 인덱싱 대신 EnumMap을 사용하라](https://github.com/brick0123/effective-java/blob/main/chap06/Item37.md)
+- [[Item 38] 확장할 수 있는 열거 타입이 필요하면 인터페이스를 사용하라](https://github.com/brick0123/effective-java/blob/main/chap06/Item38.md)
+- [[Item 39] 명명 패턴보다 애너테이션을 사용하라](https://github.com/brick0123/effective-java/blob/main/chap06/Item39.md)
+- [[Item 40] @Override 애너테이션을 일관되게 사용하라](https://github.com/brick0123/effective-java/blob/main/chap06/Item40.md)
+- [[Item 41] 정의하려는 것이 타입이라면 마커 인터페이스를 사용하라](https://github.com/brick0123/effective-java/blob/main/chap06/Item41.md)
+
+
+
