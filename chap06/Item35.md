@@ -4,7 +4,7 @@
 
 ``` java
 // ordinal을 잘못 사용한 예
-public enum FRUITES {
+public enum FRUITS {
 
   APPLE, BANANA, ORANGE;
 
@@ -17,12 +17,12 @@ public enum FRUITES {
 상수 선언 순서를 바꾸는 순간 numberOfFruits는 오작동하며 이미 사용중인 정수와 값이 같은 상수는 추가할 수 없고 중간에 값을 비울 수도 없습니다.</br>
 해결책은 매우 간단합니다. ordinal 메서드를 이용하지 않고 인스턴스 필드에 저장하면 됩니다.
 ``` java
-public enum FRUITES {
+public enum FRUITS {
   APPLE(1), BANANA(2), ORANGE(3);
   
   private final int numberOfFruits;
 
-  FRUITES(int size) {
+  FRUITS(int size) {
     this.numberOfFruits = size; 
   }
 
