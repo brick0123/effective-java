@@ -44,7 +44,7 @@ public Cheese[] getCheeses() {
     return cheesesInStock.toArray(new Cheese[0]);
 }
 ```
-이 방식에서 성능을 더 개선할 수 있는 방법이 이씁니다. 길이가 0짜리 배열을 미리 선언해두고 반환하면 됩니다.
+이 방식에서 성능을 더 개선할 수 있는 방법이 있습니다. 길이가 0짜리 배열을 미리 선언해두고 반환하면 됩니다.
 ``` java
 private static final Cheese[] EMPTY_CHEESE_ARRAY = new Cheese[0];
    public Cheese[] getCheeses() {
