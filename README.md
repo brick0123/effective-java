@@ -53,22 +53,22 @@
 - [[Item 41] 정의하려는 것이 타입이라면 마커 인터페이스를 사용하라](https://github.com/brick0123/effective-java/blob/main/chap06/Item41.md)
 
 ## **chap07**
-- [[Item 42] 매개변수가 유효한지 검사하라] (https://github.com/brick0123/effective-java/blob/main/chap07/Item42.md)
-- [[Item 43] 매개변수가 유효한지 검사하라] (https://github.com/brick0123/effective-java/blob/main/chap07/Item43.md)
-- [[Item 44] 매개변수가 유효한지 검사하라] (https://github.com/brick0123/effective-java/blob/main/chap07/Item44.md)
-- [[Item 45] 매개변수가 유효한지 검사하라] (https://github.com/brick0123/effective-java/blob/main/chap07/Item45.md)
-- [[Item 46] 매개변수가 유효한지 검사하라] (https://github.com/brick0123/effective-java/blob/main/chap07/Item46.md)
-- [[Item 47] 매개변수가 유효한지 검사하라] (https://github.com/brick0123/effective-java/blob/main/chap07/Item47.md)
-- [[Item 48] 매개변수가 유효한지 검사하라] (https://github.com/brick0123/effective-java/blob/main/chap07/Item48.md)
+- [[Item 42] 매개변수가 유효한지 검사하라](https://github.com/brick0123/effective-java/blob/main/chap07/Item42.md)
+- [[Item 43] 매개변수가 유효한지 검사하라](https://github.com/brick0123/effective-java/blob/main/chap07/Item43.md)
+- [[Item 44] 매개변수가 유효한지 검사하라](https://github.com/brick0123/effective-java/blob/main/chap07/Item44.md)
+- [[Item 45] 매개변수가 유효한지 검사하라](https://github.com/brick0123/effective-java/blob/main/chap07/Item45.md)
+- [[Item 46] 매개변수가 유효한지 검사하라](https://github.com/brick0123/effective-java/blob/main/chap07/Item46.md)
+- [[Item 47] 매개변수가 유효한지 검사하라](https://github.com/brick0123/effective-java/blob/main/chap07/Item47.md)
+- [[Item 48] 매개변수가 유효한지 검사하라](https://github.com/brick0123/effective-java/blob/main/chap07/Item48.md)
 
 ## **chap08**
-- [[Item 49] 매개변수가 유효한지 검사하라] (https://github.com/brick0123/effective-java/blob/main/chap08/Item49.md)
-- [[Item 51] 적시에 방어적 복사본을 만들라] (https://github.com/brick0123/effective-java/blob/main/chap08/Item50.md)
-- [[Item 52] 다중정의는 신중히 사용하라] (https://github.com/brick0123/effective-java/blob/main/chap08/Item50.md)
-- [[Item 53] 가변인수는 신중히 사용하라] (https://github.com/brick0123/effective-java/blob/main/chap08/Item50.md)
-- [[Item 54] null이 아닌, 빈 컬렉션이나 배열을 반환하라] (https://github.com/brick0123/effective-java/blob/main/chap08/Item50.md)
-- [[Item 55] 옵셔널 반환은 신중히 하라] (https://github.com/brick0123/effective-java/blob/main/chap08/Item50.md)
-- [[Item 56] 공개된 API 요소에는 항상 문서화 주석을 작성하라] (https://github.com/brick0123/effective-java/blob/main/chap08/Item50.md)
+- [[Item 49] 매개변수가 유효한지 검사하라](https://github.com/brick0123/effective-java/blob/main/chap08/Item49.md)
+- [[Item 51] 적시에 방어적 복사본을 만들라](https://github.com/brick0123/effective-java/blob/main/chap08/Item50.md)
+- [[Item 52] 다중정의는 신중히 사용하라](https://github.com/brick0123/effective-java/blob/main/chap08/Item50.md)
+- [[Item 53] 가변인수는 신중히 사용하라](https://github.com/brick0123/effective-java/blob/main/chap08/Item50.md)
+- [[Item 54] null이 아닌, 빈 컬렉션이나 배열을 반환하라](https://github.com/brick0123/effective-java/blob/main/chap08/Item50.md)
+- [[Item 55] 옵셔널 반환은 신중히 하라](https://github.com/brick0123/effective-java/blob/main/chap08/Item50.md)
+- [[Item 56] 공개된 API 요소에는 항상 문서화 주석을 작성하라](https://github.com/brick0123/effective-java/blob/main/chap08/Item50.md)
 
 
 
